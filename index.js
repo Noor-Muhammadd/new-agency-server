@@ -18,12 +18,6 @@ app.use(express.static("service"));
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// const serviceAccount = require("./agency-ce295-firebase-adminsdk-o4oy4-e72d18d130.json");
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: "https://agency-ce295.firebaseio.com",
-// });
 
 const port = 5000;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
