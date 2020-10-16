@@ -164,46 +164,13 @@ client.connect((err) => {
       })
   })
 
-  
-  app.post('/isDoctor', (req, res) => {
-    const email = req.body.email;
-    doctorCollection.find({ email: email })
-        .toArray((err, doctors) => {
-            res.send(doctors.length > 0);
-        })
-})
-  
-});
+
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
-// app.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${port}`)
-// })
+  
+});
 
 app.listen(process.env.PORT || port);
 
-//  const product = {name : "Noor", price : 34}
-// reviewCollection.insertOne(product)
-// .then(result => {
-//   console.log(3233)
-// })
-
-//   app.post("/addBaseData", (req, res) => {
-// 	const baseData = req.body;
-// 	reviewCollection.insertMany(baseData)
-// 	.then((result) => {
-// 		console.log(result);
-// 		console.log(result.insertedCount, "All Data Inserted");
-// 		res.send(result.insertedCount);
-// 	});
-// });
-
-// app.post("/addReview", (req, res) => {
-//   const newReview = req.body;
-//   reviewCollection.insertOne(newReview).then((result) => {
-//     console.log(result, "Added new review");
-//   });
-// });
