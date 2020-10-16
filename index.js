@@ -179,13 +179,11 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
-// "start:dev": "nodemon index.js",
+// app.listen(port, () => {
+//   console.log(`Example app listening at http://localhost:${port}`)
+// })
 
-// app.listen(process.env.PORT || port);
-// "start": "node index.js",
+app.listen(process.env.PORT || port);
 
 //  const product = {name : "Noor", price : 34}
 // reviewCollection.insertOne(product)
